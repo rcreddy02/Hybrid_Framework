@@ -27,7 +27,7 @@ public boolean verifyAdminLogin (String username, String Password)
 	loginbutton.click();
 	String Expected = "dashboard";
 	String Actual = driver.getCurrentUrl();
-	if (Actual.equalsIgnoreCase(Expected))
+	if (Actual.contains(Expected))
 	{
 		Reporter.log("Login Pass", true);
 		return true;

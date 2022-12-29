@@ -21,7 +21,7 @@ public class ExcelFileUtil {
 	
 //	Create a constructor to read excel file path [Constructor name and Class name should be same]
 	
-	public void ExcelFileUtli (String excelpath) throws Throwable
+	public  ExcelFileUtil (String excelpath) throws Throwable
 	{
 		FileInputStream fi = new FileInputStream(excelpath);
 //		Read excel workbook data
@@ -41,7 +41,7 @@ public class ExcelFileUtil {
 //	Create a method to get cell data
 //	To get cell data we need Sheet name, Row number and Column
 //	Converting cell data into string type
-	public String getcelldata (String Sheetname, int row, int column)
+	public String getcelldata (String Sheetname,int row,int column)
 	{
 		String data ="";
 		if(wb.getSheet(Sheetname).getRow(row).getCell(column).getCellType()==Cell.CELL_TYPE_NUMERIC)
